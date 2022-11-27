@@ -1,0 +1,64 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url(hana.png) no-repeat;
+    background-size: cover;
+    background-position: top;/*  //내 부모의 머리를 기준에 맞춰서 들어가라는 뜻 */
+    width: 391px;
+    height: 235px;
+}
+.box:hover{
+    background-position: bottom;
+    transition: 1s;
+}
+.box:hover + .mornitor_wrap .overlay img{
+    opacity: 0;
+}
+.mornitor_wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 509px;
+    height: 300px;
+    pointer-events: none;
+}
+.mornitor_wrap img{
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+.overlay{
+    width: 397px;
+    height: 223px;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.overlay img{
+    opacity: 0.2;
+    transition: 0.4s;
+}
+
+
+.button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.button>div{
+    float: left;
+    margin: 0 10px;
+}
+.button .pc{}
+.button .tablet{}
+.button .mobile{}
